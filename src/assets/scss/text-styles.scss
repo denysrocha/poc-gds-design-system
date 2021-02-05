@@ -1,0 +1,77 @@
+$browser-context: 16; // Default
+
+// Convert value in pixels to em
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// Convert font-family string to value
+@function weight($string) {
+  @if $string == Thin {
+    @return 100;
+  } @else if $string == Light {
+    @return 300;
+  } @else if $string == Regular {
+    @return 400;
+  } @else if $string == Medium {
+    @return 500;
+  } @else if $string == Bold {
+    @return 700;
+  } @else if ($string == Black) {
+    @return 900;
+  } @else {
+    @return 400;
+  }
+};
+
+#app {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1.gds-h1 {
+    font-size: em($gds-h-1-web-size);
+    font-weight: weight($gds-h-1-web-weight);
+}
+h2.gds-h2 {
+  font-size: em($gds-h-2-web-h-3-mobile-size);
+  font-weight: weight($gds-h-2-web-h-3-mobile-weight);
+}
+h3.gds-h3 {
+  font-size: em($gds-h-3-web-h-4-mobile-size);
+  font-weight: weight($gds-h-3-web-h-4-mobile-weight);
+}
+h4.gds-h4 {
+  font-size: em($gds-h-4-web-size);
+  font-weight: weight($gds-h-4-web-weight);
+}
+h5.gds-h5 {
+  font-size: em($gds-h-5-web-texto-mobile-size);
+  font-weight: weight($gds-h-5-web-texto-mobile-weight);
+}
+.gds-texto {
+  font-size: em($gds-texto-web-texto-2-mobile-size);
+  font-weight: weight($gds-texto-web-texto-2-mobile-weight);
+}
+.gds-texto-2 {
+  font-size: em($gds-texto-2-web-size);
+  font-weight: weight($gds-texto-2-web-weight);
+}
+.gds-legenda {
+  font-size: em($gds-legenda-size);
+  font-weight: weight($gds-legenda-weight);
+}

@@ -1,0 +1,15 @@
+// Variables from Design System
+@import "variables";
+@import "text-styles";
+
+$theme-colors: (
+    "purple": $gds-purple
+);
+
+$border-radius: .6rem;
+
+$btn-border-radius: $border-radius;
+$card-border-radius: $border-radius;
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
