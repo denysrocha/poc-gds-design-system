@@ -3,7 +3,12 @@
 @import "text-styles";
 
 $theme-colors: (
-    "purple": $gds-purple
+    "azul": $gds-tema-azul,
+    "neutro": $gds-tema-neutro,
+    "verde": $gds-tema-verde,
+    "amarelo": $gds-tema-amarelo,
+    "vermelho": $gds-tema-vermelho,
+    "roxo": $gds-tema-roxo
 );
 
 $border-radius: .6rem;

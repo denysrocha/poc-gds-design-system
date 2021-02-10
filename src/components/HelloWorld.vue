@@ -14,13 +14,13 @@
           Some quick example text to build on the card title and make up the bulk of the card's content.
       </b-card-text>
     
-      <b-button href="#" variant="purple">Go somewhere</b-button>
+      <b-button href="#" variant="neutro">Go somewhere</b-button>
     </b-card>
     
     <br>
 
-    <b-button variant="primary" @click="helloWorld()" class="mr-2">Action</b-button>
-    <b-button variant="purple">Action</b-button>
+    <b-button variant="azul" @click="helloWorld()" class="mr-2">Action</b-button>
+    <b-button variant="roxo">Action</b-button>
 
   </b-container>
 </template>
