@@ -1,6 +1,10 @@
-// Variables from Design System
+// Variáveis do Design System
 @import "./../../../../getrak-dsp/dist/styledictionary/scss/variables.scss";
 @import "text-styles";
+
+
+
+// ## Criando novos temas
 
 $theme-colors: (
     "azul": $gds-tema-azul,
@@ -11,10 +15,27 @@ $theme-colors: (
     "roxo": $gds-tema-roxo
 );
 
-$border-radius: .6rem;
 
-$btn-border-radius: $border-radius;
-$card-border-radius: $border-radius;
 
-// Bootstrap and its default variables
+// ## Customizando o componente botão <b-button/>
+
+// Converte de pixels para em
+@function em($pixels, $context: 16) {
+  @return #{$pixels/$context}em;
+}
+
+$btn-border-radius: .5rem;
+$btn-font-size: em($gds-texto-2-web-size);
+$btn-padding-x: 1rem;
+$btn-padding-y: .5rem;
+
+
+
+// ## Customizando grid
+$grid-columns:      12;
+$grid-gutter-width: 24px;
+
+
+
+// Importando Bootstrap sass
 @import "node_modules/bootstrap/scss/bootstrap";

@@ -1,11 +1,11 @@
 $browser-context: 16; // Default
 
-// Convert value in pixels to em
+// Converte de pixels para em
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
-// Convert font-family string to value
+// Converte font-family string para um valor
 @function weight($string) {
   @if $string == Thin {
     @return 100;

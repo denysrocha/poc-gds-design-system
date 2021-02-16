@@ -1,7 +1,10 @@
 @import "main";
 
-$font-size-base: 1.125rem;
-$btn-font-size: $font-size-base;
+$grid-columns:      2;
+$grid-gutter-width: 16px;
 
-// Bootstrap and its default variables
+$font-size-base: 1.125rem;
+$btn-font-size: 1rem;
+
+// Importando Bootstrap sass
 @import "node_modules/bootstrap/scss/bootstrap";
