@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 $browser-context: 16; // Default
 
 // Converte de pixels para em
-@function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em;
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
 }
 
 // Converte font-family string para um valor
@@ -15,6 +17,8 @@ $browser-context: 16; // Default
     @return 400;
   } @else if $string == Medium {
     @return 500;
+  } @else if $string == Semibold {
+    @return 600;
   } @else if $string == Bold {
     @return 700;
   } @else if ($string == Black) {
@@ -25,7 +29,7 @@ $browser-context: 16; // Default
 };
 
 #app {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -43,35 +47,20 @@ h1 {
   margin-top: 0;
 }
 
-h1.gds-h1 {
-    font-size: em($gds-h-1-web-size);
-    font-weight: weight($gds-h-1-web-weight);
+.gds-titulo-h1 {
+    font-size: rem($gds-titulo-h-1-size); //1.802rem
+    font-weight: weight($gds-titulo-h-1-weight); // Regular
 }
-h2.gds-h2 {
-  font-size: em($gds-h-2-web-h-3-mobile-size);
-  font-weight: weight($gds-h-2-web-h-3-mobile-weight);
-}
-h3.gds-h3 {
-  font-size: em($gds-h-3-web-h-4-mobile-size);
-  font-weight: weight($gds-h-3-web-h-4-mobile-weight);
-}
-h4.gds-h4 {
-  font-size: em($gds-h-4-web-size);
-  font-weight: weight($gds-h-4-web-weight);
-}
-h5.gds-h5 {
-  font-size: em($gds-h-5-web-texto-mobile-size);
-  font-weight: weight($gds-h-5-web-texto-mobile-weight);
+.gds-titulo-h2 {
+  font-size: rem($gds-titulo-h-2-size); // 1.602rem
+  font-weight: weight($gds-titulo-h-2-weight); // Semi-bold
 }
 .gds-texto {
-  font-size: em($gds-texto-web-texto-2-mobile-size);
-  font-weight: weight($gds-texto-web-texto-2-mobile-weight);
+  font-size: rem($gds-texto-size); // 1rem
+  font-weight: weight($gds-texto-weight); // Regular
 }
 .gds-texto-2 {
-  font-size: em($gds-texto-2-web-size);
-  font-weight: weight($gds-texto-2-web-weight);
+  font-size: rem($gds-texto-2-size); // 0.889rem
+  font-weight: weight($gds-texto-2-weight); // Regular
 }
-.gds-legenda {
-  font-size: em($gds-legenda-size);
-  font-weight: weight($gds-legenda-weight);
-}
+

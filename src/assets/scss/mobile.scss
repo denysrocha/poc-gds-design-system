@@ -3,8 +3,8 @@
 $grid-columns:      2;
 $grid-gutter-width: 16px;
 
-$font-size-base: 1.125rem;
-$btn-font-size: 1rem;
+$font-size-base: 1.125rem; // 18px
+$btn-font-size: 1.125rem; // 18px
 
 // Importando Bootstrap sass
 @import "node_modules/bootstrap/scss/bootstrap";

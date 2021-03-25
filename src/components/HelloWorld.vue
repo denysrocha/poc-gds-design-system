@@ -1,13 +1,13 @@
 <template>
   <b-container>
-    <h1 class="gds-h1">Título da página</h1>
-    <h2 class="gds-h2">Título h2</h2>
+    <h1 class="gds-titulo-h1">Título da página</h1>
+    <h2 class="gds-titulo-h2">Título h2</h2>
     <b-card
       tag="article"
       class="mb-2 shadow border-0"
       style="max-width: 20rem;"
      >
-      <b-card-title class="gds-h4">
+      <b-card-title class="gds-titulo-h2">
         Card Title
       </b-card-title>
       <b-card-text class="gds-texto">
