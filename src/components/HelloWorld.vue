@@ -24,7 +24,7 @@
     <br><br>
 
     <b-row class="alert-roxo exemplo-conteudo-principal">
-      <b-col cols="1" lg="6" xl="3" :key="l" v-for="l in loop">
+      <b-col xs="12" sm="3" md="6" lg="3" :key="l" v-for="l in loop">
         <b-form-group
         label="Email address:"
         :label-for="returnString(l)"
