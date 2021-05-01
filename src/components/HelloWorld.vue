@@ -1,75 +1,32 @@
 <template>
   <b-container>
-    <h1 class="gds-titulo-h1">Título da página</h1>
-    <h2 class="gds-titulo-h2">Título h2</h2>
-    <b-card
-      tag="article"
-      class="mb-2 shadow border-0"
-      style="max-width: 20rem;"
-     >
-      <b-card-title class="gds-titulo-h2">
-        Card Title
-      </b-card-title>
-      <b-card-text class="gds-texto">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-    
-      <b-button href="#" variant="neutro">Go somewhere</b-button>
-    </b-card>
-    
-    <br>
+    <g-card titulo="Título do card" imgSrc="https://picsum.photos/600/300/?image=25" alt="Descrição" class="mt-4">
 
-    <b-button variant="azul" @click="helloWorld()" class="mr-2">Action</b-button>
-    <b-button variant="roxo">Action</b-button>
-    <br><br>
+      <template v-slot:texto>
+        Aqui ficará o texto do card
+      </template>
 
-    <b-row class="alert-roxo exemplo-conteudo-principal">
-      <b-col xs="12" sm="3" md="6" lg="3" :key="l" v-for="l in loop">
-        <b-form-group
-        label="Email address:"
-        :label-for="returnString(l)"
-        description="We'll never share your email with anyone else."
-        >
-          <b-form-input
-            :id="returnString(l)"
-            type="email"
-            placeholder="Enter email"
-            required
-          ></b-form-input>
-        </b-form-group>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
-        <b-button variant="vermelho">Ação</b-button>
-      </b-col>
-    </b-row>
+      <template v-slot:botoes>
+          <g-botao :tema="tema" tipo="secundario">Botão secundário</g-botao>
+          <g-botao :tema="tema" tipo="primario">Botão primário</g-botao>
+      </template>
+
+    </g-card>
 
   </b-container>
 </template>
 
 <script>
+import GBotao from './../../../getrak-dsp-web/vuejs/g-botao.vue'
+import GCard from './../../../getrak-dsp-web/vuejs/g-card.vue'
 export default {
   name: 'HelloWorld',
   data: () => ({
-    idButton: "test",
-    loop: [
-      1,
-      2,
-      3,
-      4
-    ]
+    tema: "abacate"
   }),
-  props: {
-    msg: String
-  },
-  methods: {
-    helloWorld () {
-      alert('Its work!')
-    },
-    returnString(s) {
-      return s.toString()
-    }
+  components: {
+    GBotao,
+    GCard
   }
 }
 </script>
